@@ -66,7 +66,7 @@ public class OrderHistoryImpl implements OrderHistoryService {
             String userId = (String) object.get("userId");
             String productId = (String) object.get("productId");
             String merchantId = (String) object.get("merchantId");
-            Integer rating = (Integer) object.get("rating");
+            Double rating = (Double) object.get("rating");
             orderHistoryRepository.updateRating(userId, productId, merchantId, rating);
             jsonObject.put("status", true);
         } catch (Exception ex){

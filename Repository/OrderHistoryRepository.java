@@ -19,6 +19,6 @@ public interface OrderHistoryRepository extends CrudRepository<OrderHistory, Str
     @Transactional
     @Modifying
     @Query(value = "Update order_history set rating_given = :ratingGiven, is_rated = true where merchant_id = :merchantId and product_id = :productId and user_id = :user_id", nativeQuery = true)
-    void updateRating(@Param("user_id") String userId, @Param("productId") String productId, @Param("merchantId") String merchantId, @Param("ratingGiven") Integer ratingGiven);
+    void updateRating(@Param("user_id") String userId, @Param("productId") String productId, @Param("merchantId") String merchantId, @Param("ratingGiven") Double ratingGiven);
 
 }
