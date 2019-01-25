@@ -65,8 +65,8 @@ public class OrderHistoryController {
             for (OrderHistoryDTO orderHistoryDTO : orderHistoryDTOList) {
                 OrderHistory orderHistory = new OrderHistory();
                 UserModule userModule = new UserModule();
-                BeanUtils.copyProperties(orderHistoryDTO, orderHistory);
 
+                BeanUtils.copyProperties(orderHistoryDTO, orderHistory);
                 userModule.setUserId(orderHistoryDTO.getUserId());
                 orderHistory.setUserModule(userModule);
                 orderHistories.add(orderHistory);

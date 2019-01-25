@@ -14,6 +14,11 @@ public class OrderHistoryDTO {
     private Double ratingGiven;
     private Boolean isRated;
 
+    public OrderHistoryDTO() {
+        this.ratingGiven = 0.0;
+        this.isRated = false;
+    }
+
     public Double getRatingGiven() {
         return ratingGiven;
     }
@@ -112,6 +117,10 @@ public class OrderHistoryDTO {
                 ", quantity=" + quantity +
                 ", price=" + price +
                 ", userId='" + userId + '\'' +
+                ", productId='" + productId + '\'' +
+                ", merchantId='" + merchantId + '\'' +
+                ", ratingGiven=" + ratingGiven +
+                ", isRated=" + isRated +
                 '}';
     }
 }
